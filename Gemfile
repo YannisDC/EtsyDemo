@@ -14,17 +14,20 @@ gem "paperclip", "~> 4.2"
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'devise'
 
-#group :development, :test do
-#    gem 'sqlite3'
-#end
 
 group :production do
     gem 'pg'
     gem 'rails_12factor'
 end
 
-gem 'sdoc', '~> 0.4.0',          group: :doc
+group :doc do
+  gem 'sdoc'
+end
+
+group :development do
+  gem 'spring'
+end
 
 
-gem 'spring',        group: :development
+
 
